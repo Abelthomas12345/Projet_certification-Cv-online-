@@ -148,22 +148,18 @@ section {
 
 .competence_sous_left,
 .competence_sous_right,
-.recommandation_div {
+.competence_left,
+.competence_right,
+.recommandation_div,
+.recommandation_div_left,
+.recommandation_div_right {
     margin: 0px 10px;
     width: 50%;
 }
 
 .competence_sous,.recommandation_div {
-    /* background-color: aquamarine; */
     display: flex;
     align-items: center;
-    align-content: center;
-}
-
-.recommandation_div_left,
-.recommandation_div_right {
-    width: 50%;
-    margin: 0px 10px;
 }
 
 .recommandation_div_left img {
@@ -191,9 +187,10 @@ section {
 
 .expright,
 .expleft {
+    display: block;
     margin: auto 10px;
+    width: 100%;
 }
-
 /* debut code footer */
 
 footer {
@@ -323,11 +320,12 @@ form.new_listener button:focus-visible {
 
 ul.reseaux_sociaux {
     display: block;
+    text-align: center;
 }
 
 ul.reseaux_sociaux li {
     display: inline;
-    padding: 0px;
+    padding: 5px;
 }
 ul.reseaux_sociaux li a {
     text-decoration: none;
@@ -368,13 +366,13 @@ div.copyright p {
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 21px;
         text-align: center;
         margin-top: 15px;
     }
 
     h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     p {
@@ -415,6 +413,7 @@ div.copyright p {
     .section, .parcours .section {
         display: flex;
         flex-direction: column;
+
         height: auto ;
         max-height: none; /* Enlève la limite max-height qui coupait le contenu */
         margin: 10px ;
@@ -443,6 +442,12 @@ div.copyright p {
         box-sizing: border-box;
     }
 
+    .competence_left , .competence_right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
     /* Gestion de la section Parcours (Expériences + Scolaire) */
     .experience {
         flex-direction: column ; /* La date va au-dessus du détail */
@@ -459,7 +464,7 @@ div.copyright p {
     }
 
     /* Ajustement des listes de compétences */
-    .competence_sous {
+    .competence_sous{
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
