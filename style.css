@@ -37,11 +37,12 @@ nav {
     padding: 0px;
     background-color: #323243;
     border: 1px solid black;
+    position: sticky;
+    top: 0px;
 }
 
 nav div {
     display: block;
-
 }
 
 nav div ul {
@@ -118,18 +119,23 @@ section {
 }
 
 .left img {
-    width: 100%;
-    height: auto;
+    width: 80%;
+    margin-left: 15px;
+    border-radius: 50px;
 }
 
 .right {
     width: 70%;
     float: right;
+    font-size: 20px;
 }
 
-.parcours .section {
+.parcours .sec {
     display: flex;
-    flex-direction: column;
+    flex-direction:column ;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px 30px;
 }
 
 .experience {
@@ -380,33 +386,31 @@ div.copyright p {
     }
 
     /* Le menu de navigation passe en colonne */
+    nav{
+        position: relative;
+    }
     nav div ul {
         flex-direction: column;
         gap: 10px;
-        padding: 10px 0;
         text-align: center;
     }
 
     nav div ul li a {
         font-size: 15px;
-        padding: 8px 10px;
+        padding: 10px;
         display: block;
     }
 
-    nav li:hover a {
-        border: none;
-        padding: 8px 10px; 
-    }
     /* Supprime l'effet de saut et harmonise le menu sur mobile */
-    nav div ul li:hover {
-        border: none !important; /* Enlève la bordure du haut inutile sur mobile */
-        background-color: transparent !important; /* Évite les flashs de couleurs de fond différents */
+    nav div ul li:hover{
+        border: none !important; /*Enlève la bordure du haut inutile sur mobile */
+        background-color: transparent !important;/* Évite les flashs de couleurs de fond différents*/
+        padding-top: 5px;
     }
 
-    nav div ul li a:hover {
-        background-color: rgba(255, 255, 255, 0.1); /* Ajoute un léger voile blanc discret au clic */
+    nav div ul li:hover a {
+        background-color: rgba(255, 255, 255, 0.1);/* Ajoute un léger voile blanc discret au clic */
         border-radius: 4px;
-        padding: 10px;
     }
 
     /* On force TOUTES les sections à se comporter en colonnes flexibles */
@@ -428,7 +432,7 @@ div.copyright p {
     }
 
     /* On annule les floats et on met la largeur à 100% pour éviter que ça sorte du bloc */
-    .left, .right, 
+    .left, .right, .left img, .right img,
     .expleft, .expright,
     .experiences, .parcours_scolaire,
     .experience_date, .experience_detail,
@@ -440,6 +444,8 @@ div.copyright p {
         margin-left: 0 ;
         margin-right: 0 ;
         box-sizing: border-box;
+        text-align: justify;
+        gap: 10px;
     }
 
     .competence_left , .competence_right {
